@@ -11,19 +11,22 @@
 
 <body>
     <h1 class="alert alert-dark">Sports Highlights</h1>
-    <div class = "container">
-        <div id="buttons-view">
+    <div class = "row">
+        <div class = "col-md-4">
+            <h3>Click a button to see your highlights! Click an image to see the gif!</h3>
+            <form id="button-form">
+            <label for="button-input">Add Your Own Button!</label>
+            <input type="text" id="button-input"><br>
+        
+            <!-- Button triggers new search to be added -->
+            <input id="add-search" type="submit" value="Add a Button">
+            </form>
+            <div id="buttons-view"></div>
+            
         </div>
-
-        <form id="button-form">
-          <label for="button-input">Add Your Own Button!</label>
-          <input type="text" id="button-input"><br>
-    
-          <!-- Button triggers new search to be added -->
-          <input id="add-search" type="submit" value="Add a Button">
-        </form>
-
-        <div id = "display"></div>
+        <div class = "col-md-8">
+            <div id = "display"></div>
+        </div> 
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="javascript/app.js"></script>

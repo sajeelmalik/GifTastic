@@ -2,6 +2,15 @@ h1{
     text-align: center;
 }
 
+h3{
+    justify-content: center;
+}
+
 button{
     margin: 2px;
+}
+
+form{
+    margin: 5px;
+    margin-bottom: 20px;
 }
