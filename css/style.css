@@ -1,9 +1,28 @@
-h1{
-    text-align: center;
+body {
+    color: white;
+
 }
 
-h3{
+.bg{
+    position: fixed;
+    background-repeat: no-repeat;   
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    /* background-attachment: fixed; */
+    background-image: url("../images/stadium.jpg");
+    opacity: 0.9;
+}
+
+h1{
+    text-align: center;
+    text-shadow: 1px 1px rgba(77, 70, 70, 0.719);
+}
+
+h3, label{
     justify-content: center;
+    
 }
 
 button{

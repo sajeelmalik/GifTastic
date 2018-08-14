@@ -1,3 +1,6 @@
+//Sajeel Malik
+//Sports Highlights Gif Generator
+
 $(document).ready(function(){
 
     var searches = ["NBA", "NFL", "MLB", "World Cup", "NHL", "Houston Rockets", "Golden State Warriors"];
@@ -51,7 +54,7 @@ $(document).ready(function(){
         for (var i = 0; i < searches.length; i++) {
 
           var a = $("<button>");
-          a.addClass("btn btn-primary");
+          a.addClass("btn btn-success");
           a.attr("data-search", searches[i]);
           a.text(searches[i]);
           $("#buttons-view").append(a);
