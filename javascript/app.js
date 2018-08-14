@@ -2,12 +2,15 @@ $(document).ready(function(){
 
     var searches = ["NBA", "NFL", "MLB", "World Cup", "NHL", "Houston Rockets", "Golden State Warriors"];
 
+    createButtons();
+
     $("button").on("click", function() {
         var apiKey = "BFjm7zYPwSkcSu4q5YluCE9EyQTrjD69";
         var search = $(this).attr("data-search");
         var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
           search + "&api_key=" + apiKey + "&limit=10";
-  
+        $("#display").empty();
+
         $.ajax({
           url: queryURL,  
           method: "GET"
@@ -19,17 +22,18 @@ $(document).ready(function(){
           var results = response.data;
           console.log(results);
           for (var i = 0; i < results.length; i++) {
-  
         
             var newDiv = $("<div>");
+            var h2 = $("<h2>").text(search)
             var p = $("<p>").text("Rating: " + results[i].rating);
             var divImage = $("<img>");
             divImage.attr("src", results[i].images.fixed_height.url);
             
             newDiv.append(p, divImage);
-            $("#display").prepend(newDiv);
+            $("#display").append(newDiv);
           // ==================================
           }
+          $("#display").prepend(h2);
   
         });
       });
