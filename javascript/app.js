@@ -4,7 +4,8 @@ $(document).ready(function(){
 
     createButtons();
 
-    $("button").on("click", function() {
+    //a button click listener on the document so that new buttons are considered as well
+    $(document).on("click", "button", function() {
         var apiKey = "BFjm7zYPwSkcSu4q5YluCE9EyQTrjD69";
         var search = $(this).attr("data-search");
         var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
@@ -20,16 +21,20 @@ $(document).ready(function(){
           console.log(response);
   
           var results = response.data;
-          console.log(results);
+          console.log(results, searches);
           for (var i = 0; i < results.length; i++) {
         
             var newDiv = $("<div>");
             var h2 = $("<h2>").text(search)
             var p = $("<p>").text("Rating: " + results[i].rating);
             var divImage = $("<img>");
-            divImage.attr("src", results[i].images.fixed_height.url);
+            divImage.attr("src", results[i].images.fixed_height_still.url);
+
+            divImage.attr("data-state", "still")
+            divImage.attr("data-still", results[i].images.fixed_height_still.url);
+            divImage.attr("data-animate", results[i].images.fixed_height.url);
             
-            newDiv.append(p, divImage);
+            newDiv.append(divImage, p);
             $("#display").append(newDiv);
           // ==================================
           }
@@ -62,6 +67,21 @@ $(document).ready(function(){
 
             createButtons();
         }
+      });
+
+      $(document).on("click", "img", function() {
+  
+        var state = $(this).attr("data-state");
+ 
+        if(state === "animate"){
+          $(this).attr("src", $(this).attr("data-still"));
+          $(this).attr("data-state", "still");
+        }
+        else if(state === "still"){
+          $(this).attr("src", $(this).attr("data-animate"));
+          $(this).attr("data-state", "animate");
+        }
+ 
       });
 
 });
