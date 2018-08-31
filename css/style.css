@@ -20,6 +20,20 @@ h1{
     text-shadow: 1px 1px rgba(77, 70, 70, 0.719);
 }
 
+h2{
+    margin-top: 15px;
+    text-align: center;
+    text-shadow: 1px 1px rgba(77, 70, 70, 0.719);
+}
+
+/* h2:hover{
+    transition: 0.5s ease;
+    background-color: rgb(24, 24, 24);
+    color: white;
+    text-shadow: 1px 1px rgba(204, 193, 193, 0.719);
+    border: black;
+} */
+
 h3, label{
     justify-content: center;
     
@@ -32,4 +46,21 @@ button{
 form{
     margin: 5px;
     margin-bottom: 20px;
+}
+
+#display{
+    display: flex;
+    align-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+img{
+    margin-right: 10px;
+}
+img:hover{
+    transition: 0.3s ease-in-out;
+    box-shadow: 1px 1px 1px 1px rgb(96, 96, 104);
+    border-radius: 10px;
+    border: 3px rgb(67, 67, 231);
 }

@@ -28,8 +28,8 @@ $(document).ready(function(){
           for (var i = 0; i < results.length; i++) {
         
             var newDiv = $("<div>");
-            var h2 = $("<h2>").text(search)
-            var p = $("<p>").text("Rating: " + results[i].rating);
+            var h2 = $("<h2 class='alert alert-dark col-md-10'>").text(search)
+            var p = $("<p>").html("<span class='badge badge-info'>Rating: " + results[i].rating +"</span>");
             var divImage = $("<img>");
             divImage.attr("src", results[i].images.fixed_height_still.url);
 
@@ -41,7 +41,7 @@ $(document).ready(function(){
             $("#display").append(newDiv);
           // ==================================
           }
-          $("#display").prepend(h2);
+          $("#search-title").html(h2);
   
         });
       });

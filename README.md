@@ -30,7 +30,7 @@ The page can be run from any browser, preferably on Google Chrome!
 * **Javascript** - the primary scripting logic powering the game
 * **jQuery** - the robust scripting library for Javascript
 * **AJAX** - Asynchronous Javascript
-* [**Giphy API **](https://developers.giphy.com/) - a developer-oriented resource to natively embed gifs
+* [**Giphy API**](https://developers.giphy.com/) - a developer-oriented resource to natively embed gifs
 * [**Bootstrap CDN v4.1.0**](https://getbootstrap.com/docs/4.1/getting-started/introduction/) - the open-source web styling framework used
 * [**Google Fonts**](https://fonts.google.com/) - an interactive library of licensed fonts 
 
@@ -76,7 +76,7 @@ $(document).on("click", "button", function() {
 
 ```
 
-# Learning points
+# Learning Points
 <!-- Learning points where you would write what you thought was helpful -->
 * JSON is a revolutionary array-based format that creates an ease of data manipulation, especially when using APIs pooled from online resources, in this case, Giphy
 * AJAX functions provide an interesting and unique format for running functions, especially with the novel .then() 'promise' format
