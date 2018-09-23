@@ -5,6 +5,9 @@ $(document).ready(function(){
 
     var searches = ["NBA", "NFL", "MLB", "World Cup", "NHL", "Houston Rockets", "Golden State Warriors"];
 
+    var backgrounds = ["https://images.pexels.com/photos/163452/basketball-dunk-blue-game-163452.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260","https://images.pexels.com/photos/532805/pexels-photo-532805.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260","https://images.pexels.com/photos/56837/swimmers-swimming-race-competition-56837.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"]
+
+    // createBackground();
     createButtons();
 
     //a button click listener on the document so that new buttons are considered as well
@@ -28,7 +31,7 @@ $(document).ready(function(){
           for (var i = 0; i < results.length; i++) {
         
             var newDiv = $("<div>");
-            var h2 = $("<h2 class='alert alert-dark col-md-10'>").text(search)
+            var h2 = $("<h2 class='alert alert-light col-md-10'>").text(search)
             var p = $("<p>").html("<span class='badge badge-info'>Rating: " + results[i].rating +"</span>");
             var divImage = $("<img>");
             divImage.attr("src", results[i].images.fixed_height_still.url);
@@ -46,7 +49,12 @@ $(document).ready(function(){
         });
       });
 
-    // THIS IS WHERE I AM!
+      function createBackground(){
+        var randomImage = background[Math.floor(Math.random() * backgrounds.length)];
+
+        $(".bg").css("background-image", "url("+randomImage+")")
+      }
+    
       function createButtons() {
         $("#buttons-view").empty();
 
@@ -54,7 +62,7 @@ $(document).ready(function(){
         for (var i = 0; i < searches.length; i++) {
 
           var a = $("<button>");
-          a.addClass("btn btn-success");
+          a.addClass("btn btn-light");
           a.attr("data-search", searches[i]);
           a.text(searches[i]);
           $("#buttons-view").append(a);

@@ -11,19 +11,28 @@ body {
     width: 100%;
     background-size: cover;
     /* background-attachment: fixed; */
-    background-image: url("../images/stadium.jpg");
+    background-image: url("https://images.pexels.com/photos/163452/basketball-dunk-blue-game-163452.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
     opacity: 0.9;
 }
 
 h1{
     text-align: center;
+    font-size: 60px;
     text-shadow: 1px 1px rgba(77, 70, 70, 0.719);
+    font-family: 'Notable', sans-serif;
+    animation-name: slideInDown;
+
 }
 
 h2{
     margin-top: 15px;
     text-align: center;
     text-shadow: 1px 1px rgba(77, 70, 70, 0.719);
+    font-family: 'Montserrat', sans-serif;
+}
+
+h2.alert{
+    opacity: 0.9;
 }
 
 /* h2:hover{
@@ -34,9 +43,9 @@ h2{
     border: black;
 } */
 
-h3, label{
+h3, h4, label{
     justify-content: center;
-    
+    font-family: 'Montserrat', sans-serif;
 }
 
 button{
@@ -48,9 +57,28 @@ form{
     margin-bottom: 20px;
 }
 
+#button-input{
+    border-radius: 10px;
+    border: 1.5px solid #07BEB8;
+    background-color: rgba(121, 121, 230, 0.466);
+    color: white;
+    margin-bottom: 5px;
+    padding: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+#button-input:hover{
+    background-color: transparent;
+}
+
+#button-input:focus{
+    border: 2px solid #07BEB8;
+
+}
+
 #display{
     display: flex;
-    align-content: space-evenly;
+    align-content: space-between;
     flex-wrap: wrap;
     margin-top: 10px;
 }
@@ -62,5 +90,38 @@ img:hover{
     transition: 0.3s ease-in-out;
     box-shadow: 1px 1px 1px 1px rgb(96, 96, 104);
     border-radius: 10px;
-    border: 3px rgb(67, 67, 231);
+    border: 3px rgb(175, 175, 216) solid;
 }
+
+/* Animations */
+
+@-webkit-keyframes slideInDown {
+    from {
+      -webkit-transform: translate3d(0, -100%, 0);
+      transform: translate3d(0, -100%, 0);
+      visibility: visible;
+    }
+  
+    to {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  @keyframes slideInDown {
+    from {
+      -webkit-transform: translate3d(0, -100%, 0);
+      transform: translate3d(0, -100%, 0);
+      visibility: visible;
+    }
+  
+    to {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  .slideInDown {
+    -webkit-animation-name: slideInDown;
+    animation-name: slideInDown;
+  }
