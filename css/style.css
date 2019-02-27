@@ -83,14 +83,21 @@ form{
     margin-top: 10px;
 }
 
+.col-md-3{
+    background-color: rgb(177, 174, 174, 0.4);
+    border-radius: 20px;
+    padding-bottom: 10px;
+}
+
 img{
     margin-right: 10px;
 }
 img:hover{
     transition: 0.3s ease-in-out;
-    box-shadow: 1px 1px 1px 1px rgb(96, 96, 104);
+    box-shadow: 0.5px 0.5px 0.5px 0.5px rgb(96, 96, 104, 0.7);
     border-radius: 10px;
     border: 3px rgb(175, 175, 216) solid;
+    cursor: crosshair;
 }
 
 /* Animations */
