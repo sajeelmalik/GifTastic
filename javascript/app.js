@@ -30,7 +30,7 @@ $(document).ready(function(){
           console.log(results, searches);
           for (var i = 0; i < results.length; i++) {
         
-            var newDiv = $("<div>");
+            var newDiv = $("<div class = 'fadeInRight'>");
             var h2 = $("<h2 class='alert alert-light col-md-10'>").text(search)
             var p = $("<p>").html("<span class='badge badge-info'>Rating: " + results[i].rating +"</span>");
             var divImage = $("<img>");
