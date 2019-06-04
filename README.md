@@ -14,7 +14,7 @@ Follow the deployed project link below to play the game!
  
 [Sports Highlights](https://sajeelmalik.github.io/GifTastic/)
 
-### Image Preview of Rap Trivia
+### Image Preview of GifTastic
 <!-- take a picture of the image and add it into the readme  -->
 
 ![Sports Highlights Gifs Preview](https://raw.githubusercontent.com/sajeelmalik/GifTastic/master/images/preview.JPG "Sports Gifs Preview")
